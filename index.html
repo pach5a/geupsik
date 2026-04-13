@@ -1,14 +1,74 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹 호스팅</title>
+    <title>급식실 상태</title>
+
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+            font-family: 'Noto Sans KR', sans-serif;
+            color: white;
+        }
+
+        .card {
+            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            background: #1e1e1e;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            width: 320px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            opacity: 0.8;
+        }
+
+        .status {
+            font-size: 60px;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        .desc {
+            font-size: 18px;
+            opacity: 0.8;
+        }
+
+        .time {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.5;
+        }
+
+        .busy { color: #ff4d4f; }
+        .normal { color: #fadb14; }
+        .free { color: #52c41a; }
+    </style>
 </head>
+
 <body>
-    git pages 입니다.
+
+<div class="card">
+    <h1>🍽 급식실 상태</h1>
+
+    <!-- 여기만 바꾸면 됨 -->
+    <div class="status busy">🔴 혼잡</div>
+    <div class="desc">현재 사람이 많아요 😵‍💫</div>
+    <div class="time">⏱ 12:32 기준</div>
+
+</div>
+
 </body>
 </html>
-출처: https://devyihyun.tistory.com/203 [이롭게 현명하게:티스토리]

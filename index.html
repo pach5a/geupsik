@@ -1,105 +1,14 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>급식실 상태</title>
-
-  <!-- 폰트 -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #111;
-      font-family: 'Noto Sans KR', sans-serif;
-      color: white;
-    }
-
-    .card {
-      text-align: center;
-      padding: 40px;
-      border-radius: 20px;
-      background: #1e1e1e;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      width: 320px;
-    }
-
-    h1 {
-      margin-bottom: 20px;
-      font-size: 24px;
-      opacity: 0.8;
-    }
-
-    .status {
-      font-size: 60px;
-      font-weight: 700;
-      margin: 20px 0;
-    }
-
-    .desc {
-      font-size: 18px;
-      opacity: 0.8;
-    }
-
-    .time {
-      margin-top: 20px;
-      font-size: 14px;
-      opacity: 0.5;
-    }
-
-    .busy { color: #ff4d4f; }
-    .normal { color: #fadb14; }
-    .free { color: #52c41a; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 호스팅</title>
 </head>
-
 <body>
-
-<div class="card">
-  <h1>🍽 급식실 상태</h1>
-
-  <div id="status" class="status">불러오는 중...</div>
-  <div id="desc" class="desc"></div>
-  <div id="time" class="time"></div>
-</div>
-
-<script>
-fetch('status.json')
-  .then(res => res.json())
-  .then(data => {
-    const statusEl = document.getElementById('status');
-    const descEl = document.getElementById('desc');
-    const timeEl = document.getElementById('time');
-
-    const status = data.status;
-
-    statusEl.innerText = status;
-
-    if (status === "혼잡") {
-      statusEl.className = "status busy";
-      descEl.innerText = "현재 사람이 많아요 😵‍💫";
-    } else if (status === "보통") {
-      statusEl.className = "status normal";
-      descEl.innerText = "적당히 붐비는 상태 🙂";
-    } else {
-      statusEl.className = "status free";
-      descEl.innerText = "여유롭게 이용 가능 😄";
-    }
-
-    const now = new Date();
-    const time = now.getHours().toString().padStart(2, '0') + ":" +
-                 now.getMinutes().toString().padStart(2, '0');
-
-    timeEl.innerText = "⏱ " + time + " 기준";
-  })
-  .catch(() => {
-    document.getElementById('status').innerText = "불러오기 실패";
-  });
-</script>
-
+    git pages 입니다.
 </body>
 </html>
+출처: https://devyihyun.tistory.com/203 [이롭게 현명하게:티스토리]
